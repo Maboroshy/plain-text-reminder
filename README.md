@@ -7,7 +7,7 @@ Plain text reminder (!R) continuously scans plain text files and makes specifica
 
 `@!10:00 Star Plain text reminder` somewhere in plain text file will remind you with text "Star Plain text reminder" next time it's 10 o'clock. 
 
-Reminder tags can set time as absolute or as delta to current time. Support for recurring reminders is planned. There are many ways to compose a reminder tag. Read more about reminder tag syntax here.
+Reminder tags can set time as absolute or as delta to current time. Support for recurring reminders is planned. There are many ways to compose a reminder tag. Read more about reminder tag syntax [here](docs/reminder-tag-syntax.md).
 
 !R tries to be: 
 - Minimalistic 
