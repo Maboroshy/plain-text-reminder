@@ -46,6 +46,6 @@ What !R really does:
 2. Watches set folder and reparses changed files.  
 3. Replaces found reminder tags with ones that are independent of current time. Otherwise `@!10:00` will always be next 10 o'clock, rather than a single tomorrow 10'clock.  
 4. Waits for a time of set reminders.  
-5. Shows a pop-up with ability to reset or dismiss a reminder.  
+5. Shows a pop-up with ability to postpone or dismiss a reminder.  
 6. Changes reminder tags in text files accordingly.  
 
