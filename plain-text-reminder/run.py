@@ -1,5 +1,6 @@
 #!/bin/env python3
 
+import os
 import logging
 import argparse
 
@@ -12,7 +13,7 @@ import r_scheduler
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument('-s', '--scan', action='store', dest='scan_path', required=False,
-                            help="Path of directory to scan")
+                            help="Path of directory or file to scan")
     arg_parser.add_argument('-c', '--config', action='store', dest='config_path', required=False,
                             default='reminder.cfg', help="Path to config file")
     arg_parser.add_argument('-v', action='count', dest='log_level', required=False,
@@ -30,6 +31,14 @@ if __name__ == '__main__':
     if not args.scan_path:
         if cfg.scan_path:
             args.scan_path = cfg.scan_path
+        else:
+            print('Path of folder to scan is not set.',
+                  '\nProvide path by running "run.py -s path" or put it into reminder.cfg "scan_path".')
+            exit(1)
+
+    if not os.path.exists(args.scan_path):
+        print('Can\'t find folder or file at provided path.')
+        exit(1)
 
     if args.log_level:
         if args.log_level == 1:
