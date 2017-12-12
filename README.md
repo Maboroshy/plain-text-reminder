@@ -41,7 +41,7 @@ At the first run !R will create reminder.cfg file for its settings
 List of found reminders, messages for triggered reminders and available user actions will appear in cmd/terminal.
 
 
-What !R really do:  
+What !R really does:  
 1. Parses plain text files in set folder for reminder tags.  
 2. Watches set folder and reparses changed files.  
 3. Replaces found reminder tags with ones that are independent of current time. Otherwise `@!10:00` will always be next 10 o'clock, rather than a single tomorrow 10'clock.  
